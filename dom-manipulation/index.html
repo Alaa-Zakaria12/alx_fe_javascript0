@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quote Generator</title>
+    <style>
+        /* Basic styles for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #quoteDisplay {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+        }
+        .notification {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        #notificationArea {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Quote Generator</h1>
+
+    <!-- Category Filter -->
+    <label for="categoryFilter">Filter by category:</label>
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <!-- Dynamically populated categories -->
+    </select>
+
+    <!-- Quote Display Section -->
+    <div id="quoteDisplay">
+        <p>No quotes available. Please add some!</p>
+    </div>
+    <button id="newQuote">Show New Quote</button>
+
+    <!-- Form for adding a new quote -->
+    <div>
+        <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
+        <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
+        <button id="addQuoteBtn">Add Quote</button>
+    </div>
+
+    <!-- Export and Import buttons -->
+    <button id="exportBtn">Export Quotes to JSON</button>
+    <input type="file" id="importFile" accept=".json" />
+
+    <!-- Notification Area -->
+    <div id="notificationArea"></div>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
